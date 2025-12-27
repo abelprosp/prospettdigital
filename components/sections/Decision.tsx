@@ -97,7 +97,7 @@ Aguardo retorno!`
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
             {/* Form Section */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}

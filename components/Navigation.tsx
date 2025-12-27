@@ -46,7 +46,7 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="container-urban mx-auto px-4 md:px-8 lg:px-16">
-        <div className="glass-effect rounded-2xl px-6 py-4 mt-4">
+        <div className="glass-effect rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 mt-2 md:mt-4">
           <div className="flex items-center justify-between">
             {/* Logo - Left */}
             <motion.a
@@ -60,7 +60,7 @@ export default function Navigation() {
                 alt="Prospett"
                 width={180}
                 height={60}
-                className="h-12 md:h-14 w-auto"
+                className="h-8 md:h-12 lg:h-14 w-auto"
                 priority
               />
             </motion.a>
@@ -111,11 +111,11 @@ export default function Navigation() {
               {/* Get Started Button */}
               <motion.a
                 href="#decision"
-                className="hidden sm:flex items-center gap-2 px-6 py-3 glass-effect border border-gray-dark/30 rounded-lg hover:bg-primary/20 transition-all group"
+                className="hidden md:flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 glass-effect border border-gray-dark/30 rounded-lg hover:bg-primary/20 transition-all group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="text-sm font-medium text-white">Começar</span>
+                <span className="text-xs md:text-sm font-medium text-white">Começar</span>
                 <div className="flex items-center gap-1 text-xs text-gray-light">
                   <span>• PRA ONTEM!</span>
                   <HiArrowRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -44,24 +44,24 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="container-urban relative z-10 px-4 md:px-8 lg:px-16"
+        className="container-urban relative z-10 px-4 md:px-8 lg:px-16 py-20 md:py-0"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start order-2 lg:order-1">
             {/* Main Headline - Split style like "Discover Innovation" */}
             <motion.h1
               variants={itemVariants}
-              className="font-urban font-bold mb-6 leading-tight text-left"
+              className="font-urban font-bold mb-4 md:mb-6 leading-tight text-left w-full"
             >
-              <span className="text-primary/70 block mb-2 text-2xl md:text-3xl font-medium">Crescimento</span>
-              <span className="text-white block text-4xl md:text-5xl lg:text-6xl font-bold">Orientado por IA</span>
+              <span className="text-primary/70 block mb-2 text-xl md:text-2xl lg:text-3xl font-medium">Crescimento</span>
+              <span className="text-white block text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Orientado por IA</span>
             </motion.h1>
 
             {/* Tagline */}
             <motion.p
               variants={itemVariants}
-              className="text-xl md:text-2xl text-white/90 mb-8 max-w-xl leading-relaxed text-left"
+              className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 max-w-xl leading-relaxed text-left"
             >
               Transformamos dados em resultados. A Prospett combina inteligência artificial 
               com estratégia humana para elevar sua presença digital a novos patamares.
@@ -70,25 +70,25 @@ export default function Hero() {
             {/* CTA Button - Oval/Elongated style */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-6"
+              className="flex items-center gap-6 w-full md:w-auto"
             >
               <motion.a
                 href="#decision"
-                className="px-10 py-4 bg-black/80 backdrop-blur-sm border border-white/10 rounded-full
-                         text-white font-medium flex items-center gap-3 group hover:bg-black/90
-                         transition-all duration-300 shadow-lg"
+                className="px-6 md:px-10 py-3 md:py-4 bg-black/80 backdrop-blur-sm border border-white/10 rounded-full
+                         text-white text-sm md:text-base font-medium flex items-center gap-2 md:gap-3 group hover:bg-black/90
+                         transition-all duration-300 shadow-lg w-full md:w-auto justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span>Iniciar Projeto</span>
-                <HiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <HiArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
             </motion.div>
 
             {/* Animated Circles Indicator */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-2 mt-12"
+              className="flex items-center gap-2 mt-8 md:mt-12"
             >
               {[0, 1, 2, 3, 4].map((i) => (
                 <motion.div
@@ -119,7 +119,7 @@ export default function Hero() {
           {/* Right Column - Image */}
           <motion.div
             variants={itemVariants}
-            className="relative w-full h-full min-h-[500px] lg:min-h-[600px]"
+            className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] order-1 lg:order-2"
           >
             <Image
               src="/hero.png"
@@ -127,7 +127,7 @@ export default function Hero() {
               fill
               className="object-contain object-center"
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
             />
           </motion.div>
         </div>
@@ -138,14 +138,15 @@ export default function Hero() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
-        className="absolute bottom-8 left-8 flex items-center gap-2"
+        className="absolute bottom-4 md:bottom-8 left-4 md:left-8 flex items-center gap-2 z-20"
       >
         <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-        <span className="text-sm text-white/70">Oque está esperando para começar a crescer?</span>
+        <span className="text-xs md:text-sm text-white/70 hidden sm:inline">Oque está esperando para começar a crescer?</span>
+        <span className="text-xs text-white/70 sm:hidden">Começar a crescer?</span>
       </motion.div>
 
       {/* Circular Icons - Top Right */}
-      <div className="absolute top-8 right-8 flex flex-col gap-3 z-20">
+      <div className="absolute top-4 md:top-8 right-4 md:right-8 flex flex-col gap-2 md:gap-3 z-20">
         <motion.button
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}

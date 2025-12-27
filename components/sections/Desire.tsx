@@ -83,7 +83,7 @@ export default function Desire() {
           </motion.div>
 
           {/* Transformation Cards */}
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-8">
             {transformations.map((transformation, index) => (
               <motion.div
                 key={index}

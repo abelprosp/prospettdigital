@@ -89,7 +89,7 @@ export default function Credibility() {
           </motion.div>
 
           {/* Methods Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-20">
             {methods.map((method, index) => (
               <motion.div
                 key={index}
