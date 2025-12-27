@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Classy Marisa Font */
+@font-face {
+  font-family: 'Classy Marisa';
+  src: url('/fonts/ClassyMarisa-Regular.woff2') format('woff2'),
+       url('/fonts/ClassyMarisa-Regular.woff') format('woff'),
+       url('/fonts/ClassyMarisa-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Classy Marisa';
+  src: url('/fonts/ClassyMarisa-Bold.woff2') format('woff2'),
+       url('/fonts/ClassyMarisa-Bold.woff') format('woff'),
+       url('/fonts/ClassyMarisa-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  * {
+    @apply border-gray-mid/20;
+  }
+  
+  html {
+    @apply bg-black text-gray-lighter;
+  }
+  
+  body {
+    @apply bg-black;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-xl bg-black-light/60 border border-gray-dark/30;
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .urban-glow {
+    box-shadow: 0 0 30px rgba(16, 93, 252, 0.15), 
+                0 0 60px rgba(16, 93, 252, 0.1);
+  }
+  
+  .section-padding {
+    @apply py-section px-4 md:px-8 lg:px-16;
+  }
+  
+  .container-urban {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-dark rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary/30 text-primary;
+}
+
